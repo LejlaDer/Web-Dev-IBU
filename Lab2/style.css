@@ -1,0 +1,29 @@
+body{
+    background-color: #85AFD4;
+    color: white;
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+h1,h2,h3 {
+
+    font-weight: bold;
+}   
+
+.submit {
+
+ background-color: #E47272;
+ color: white;
+ border-radius: 20px
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
