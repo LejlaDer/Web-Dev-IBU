@@ -2,16 +2,17 @@
 
 body{
     font-family:"Joan", sans-serif;
-}
-
-#headerimg{
-
-    background-color: #f6c1a4;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+header{
+
+    background-color: #f6c1a4;
+    height: auto;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
     position: relative;
 }
 
@@ -31,10 +32,42 @@ body{
 }
 
 #logo{
-    position: absolute; 
     float: left;
     width: 5%;
-    max-width: 100%;
+}
+
+.text{
+
+    margin: 20px;
+}
+
+#imgcatalog{
+
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5eb;
+}
+
+#imgcatalog p{
+
+    text-align: center;
+    padding: 0;
+}
+
+#imgcatalog img{
+
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+footer{
+
+    background-color: #f6c1a4;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
     height: auto;
 }
 
