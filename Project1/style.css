@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+#navbar{
+
+    background-color: white; 
+
+    }
+
+#hero-video{
+
+      opacity: 1;
+
+}
+
+body {
+      font-family: "Josefin Sans", sans-serif;
+      margin: 0;
+}
+
+ul {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex; 
+      align-items: center; 
+}
+    
+li {
+      list-style: none;
+      float: none;
+}
+    
+li a, .dropbtn {
+      display: inline-block;
+      color:#bf7b67;
+      text-align: center;
+      padding: 16px 16px;
+      text-decoration: none;
+}
+    
+li.logo {
+      display: block;
+      text-align: center;
+}
+    
+li.logo img {
+      max-height: 140px; 
+}
+    
+li.dropdown {
+      display: inline-block;
+}
+    
+.dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+    
+.dropdown-content a {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+}
+    
+.dropdown-content a:hover {
+    background-color: #bf7b67;
+}
+    
+.dropdown:hover .dropdown-content {
+      display: block;
+}
+
+
+
+
+
