@@ -3,7 +3,6 @@
 #navbar{
 
     background-color: white; 
-
     }
 
 #hero-video{
@@ -49,6 +48,7 @@ li.logo img {
     
 li.dropdown {
       display: inline-block;
+      z-index: 10;
 }
     
 .dropdown-content {
@@ -57,6 +57,7 @@ li.dropdown {
       background-color: #f9f9f9;
       min-width: 100px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1000;
 }
     
 .dropdown-content a {
@@ -72,7 +73,12 @@ li.dropdown {
     
 .dropdown:hover .dropdown-content {
       display: block;
-}
+} 
+
+.dropdown {
+      position: relative;
+  }
+
 
 
 
