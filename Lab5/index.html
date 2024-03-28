@@ -5,107 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-<div class="table-responsive" style="margin: 10%;">
-    <table class="table table-bordered border-light" style="border: 1px rgba(128, 128, 128, 0.73) solid;">
+<div class="table-responsive">
+    <table class="table table-bordered border-light">
         <thead class="table-light">
           <tr>
-            <th scope="col">ID<span>&#x25BC;</span></th>
-            <th scope="col">Name<span>&#x25BC;</span></menu></th>
-            <th scope="col">Country<span>&#x25BC;</span></th>
-            <th scope="col">Email<span>&#x25BC;</span></th>
-            <th scope="col">Action<span>&#x25BC;</span></th>
+            <th scope="col"><a>ID</a></th>
+            <th scope="col"><a href="#" id="sortByName">Name<span><img class="sort-arrows" src="img/arrows.svg"></span></a></th>
+            <th scope="col"><a href="#" id="sortByCountry">Country<span><img class="sort-arrows" src="img/arrows.svg"></span></a></th>
+            <th scope="col"><a>Email</a></th>
+            <th scope="col"><a>Action</a></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-andrea-piacquadio-3763188.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-andrea-piacquadio-3763188.jpg">
                     </div>
-                    Mark
+                    Julie Black
                 </div>
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td><button>Click</menu></button></td>
+            <td>Angola</td>
+            <td>@julie5</td>
+            <td><button type="button" class="btn btn-dark" id="myBtn">Click</button></td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-andrea-piacquadio-3785424.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-andrea-piacquadio-3785424.jpg">
                     </div>
-                    Mark
+                    Jane Smith
                 </div>
             </td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td><button>Click</menu></button></td>
+            <td>Albania</td>
+            <td>@jane1</td>
+            <td><button>Click</button></td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-italo-melo-2379004.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-italo-melo-2379004.jpg">
                     </div>
-                    Mark
+                    Jim Brown
                 </div>
             </td>
-            <td>Thornton</td>
-            <td>@twitted</td>
-            <td><button>Click</menu></button></td>
+            <td>Afghanistan</td>
+            <td>@jim3</td>
+            <td><button>Click</button></td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-nathan-cowley-1300402.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-nathan-cowley-1300402.jpg">
                     </div>
-                    Mark
+                    Jake White
                 </div>
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td><button>Click</menu></button></td>
+            <td>Andorra</td>
+            <td>@jake4</td>
+            <td><button>Click</button></td>
           </tr>
           <tr>
             <th scope="row">5</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-pixabay-371985.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-pixabay-371985.jpg">
                     </div>
-                    Mark
+                    Jessica Green
                 </div>
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td><button>Click</menu></button></td>
+            <td>Algeria</td>
+            <td>@jessica2</td>
+            <td><button>Click</button></td>
           </tr>
           <tr>
             <th scope="row">6</th>
             <td>
-                <div style="display: flex; align-items: center;">
-                    <div style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
-                        <img src="img/pexels-linkedin-sales-navigator-2182970.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="profile-info">
+                    <div class="profile-image">
+                        <img src="img/pexels-linkedin-sales-navigator-2182970.jpg">
                     </div>
-                    Mark
+                    John Doe
                 </div>
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td><button>Click</menu></button></td>
+            <td>Antigua and Barbuda</td>
+            <td>@john6</td>
+            <td><button>Click</button></td>
           </tr>
         </tbody>
       </table>
-</div>  
 
+    <!--Modal-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>You clicked on ---</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</div>  
+<script src="script.js"></script>
 </body>
 </html>

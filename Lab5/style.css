@@ -1,0 +1,46 @@
+.sort-arrows{
+
+    width: 5%;
+    height: 5%;
+}
+
+.table {
+    border: 1px rgba(128, 128, 128, 0.73) solid;
+}
+
+.table-responsive {
+    margin: 10%;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+tr:hover{
+    background-color: rgb(219, 219, 219);
+    transition: 1s ease-out;
+}
