@@ -34,11 +34,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //modal
 
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-      $("#myModal").modal();
-    });
-  });
+function openModal(n) {
+    var table = document.getElementById("table");
+    var username = document.getElementById("username");
+    
+    var row = table.rows[n + 1];    
+    var name = row.cells[1].innerText.trim();
+    
+    console.log("Name:", name);
+  
+    var modal = document.getElementById("myModal");
+  
+    var span = document.getElementsByClassName("close")[0];
 
+    username.textContent = name;
+    modal.style.display = "block";
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
 
 

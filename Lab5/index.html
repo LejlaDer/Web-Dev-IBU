@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="table-responsive">
-    <table class="table table-bordered border-light">
+    <table class="table table-bordered border-light" id="table">
         <thead class="table-light">
           <tr>
             <th scope="col"><a>ID</a></th>
@@ -32,7 +32,7 @@
             </td>
             <td>Angola</td>
             <td>@julie5</td>
-            <td><button type="button" class="btn btn-dark" id="myBtn">Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(0)">Click</button></td>
           </tr>
           <tr>
             <th scope="row">2</th>
@@ -46,7 +46,7 @@
             </td>
             <td>Albania</td>
             <td>@jane1</td>
-            <td><button>Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(1)">Click</button></td>
           </tr>
           <tr>
             <th scope="row">3</th>
@@ -60,7 +60,7 @@
             </td>
             <td>Afghanistan</td>
             <td>@jim3</td>
-            <td><button>Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(2)">Click</button></td>
           </tr>
           <tr>
             <th scope="row">4</th>
@@ -74,7 +74,7 @@
             </td>
             <td>Andorra</td>
             <td>@jake4</td>
-            <td><button>Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(3)">Click</button></td>
           </tr>
           <tr>
             <th scope="row">5</th>
@@ -88,7 +88,7 @@
             </td>
             <td>Algeria</td>
             <td>@jessica2</td>
-            <td><button>Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(4)">Click</button></td>
           </tr>
           <tr>
             <th scope="row">6</th>
@@ -102,26 +102,22 @@
             </td>
             <td>Antigua and Barbuda</td>
             <td>@john6</td>
-            <td><button>Click</button></td>
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" onclick="openModal(5)">Click</button></td>
           </tr>
         </tbody>
       </table>
 
-    <!--Modal-->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-        
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-body">
-              <p>You clicked on ---</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+<!--Modal-->
+<div id="myModal" class="modal fade-in">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="d-flex flex-row bd-highlight mb-3">
+      <div class="p-2 bd-highlight"><p>You clicked on the user:</p></div>
+      <div class="p-2 bd-highlight" id="username">...</div>
+    </div>
+              
+  </div>
+</div>
     
 </div>  
 <script src="script.js"></script>
