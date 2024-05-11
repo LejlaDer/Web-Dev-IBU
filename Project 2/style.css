@@ -1,0 +1,16 @@
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+}
+
+.myLink {
+    display: none
+}
+
+.w3-display-container img:hover {
+    opacity:0.8;
+    transition: 1s ease;
+}
+
+a {
+    text-decoration: none;
+}
