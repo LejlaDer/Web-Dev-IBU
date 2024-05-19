@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/spapp.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up</title>
+</head>
+<body class="w3-light-grey">
+
+    <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+        <a href="index.html" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>TravelVista</b></a>
+        <a href="#" id="theme-switcher" class="w3-bar-item w3-button w3-right w3-text-grey" onclick="toggleTheme()"><i class="fa fa-adjust"></i></a>
+        <a href="#faq" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-large" style="margin-top: 5px;">FAQ</a>
+        <a href="#signup" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-large" style="margin-top: 5px;">Sign up</a>
+    </div>
+
+    <div class="w3-container" id="signupform" style="margin: 40px;">
+        <h2>Sign up</h2>
+        <p>Easy reservations and payments, exclusive offers and more!</p>
+        <form id="contactForm" method="post">
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First name" required name="FName"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Last name" required name="LName"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Phone number" required name="Phone"></p>
+          <button class="w3-button w3-black w3-padding-large" id="submitbutton" onclick="submitForm()">Submit</button>
+        </form>
+      </div>
+
+      <div class="w3-container" style="margin: 40px; background-color: white; padding: 20px;">
+        <h2 style="text-align: center;">User information</h2>
+        <p id="fname">Name: </p>
+        <p id="lname">Last name: </p>
+        <p id="email">Email: </p>
+        <p id="phone">Phone number: </p>
+        <button class="w3-button w3-black w3-padding-large toggle-theme" type="submit">Edit user</button>
+        <button class="w3-button w3-red w3-padding-large toggle-theme" type="submit">Delete user</button>
+
+      </div>
+
+    <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+        <h5>Find Us On</h5>
+        <div class="w3-xlarge w3-padding-10">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
