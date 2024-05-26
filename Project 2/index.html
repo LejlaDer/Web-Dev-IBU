@@ -13,12 +13,16 @@
 </head>
 <body class="w3-light-grey">
 
+  
+
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-border-bottom w3-xlarge" id="navbar">
   <a href="index.html" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>TravelVista</b></a>
   <a href="#" id="theme-switcher" class="w3-bar-item w3-button w3-right w3-text-grey" onclick="toggleTheme()"><i class="fa fa-adjust"></i></a>
   <a href="#faq" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-large" style="margin-top: 5px;">FAQ</a>
   <a href="#signup" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-large" style="margin-top: 5px;">Sign up</a>
+  <a href="login.html" class="w3-bar-item w3-button w3-right w3-text-grey w3-large w3-hover-red" style="margin-top: 5px;" id="loginLogoutButton" onclick="handleLoginLogout()">Log in</a>
+  <a href="citypicker.html" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-large" style="margin-top: 5px;">Random City Picker</a>
 </div>
 
 <!-- Header -->
@@ -78,7 +82,7 @@
 
 <!-- Good offers -->
 <div class="w3-container w3-margin-top">
-    <h3>Good Offers Right Now</h3>
+    <h3 id="offers">Good Offers Right Now</h3>
     <h6>Up to <strong>50%</strong> discount.</h6>
   </div>
   <div class="w3-row-padding w3-text-white w3-large">
@@ -163,7 +167,7 @@
     <p>Let us book your next trip!</p>
     <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
     <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br><br>
     <form id="contactForm" method="post"  action="">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
@@ -356,6 +360,25 @@
 
 <!-- Custom JS -->
 <script src="script.js"></script>
+<script src ="login.js"></script>
+
+<script>
+  // Update the signup/login button
+  var loginLogout = document.getElementById('loginLogoutButton');
+
+  if (localStorage.getItem('loggedInUser')) {
+      var user = JSON.parse(localStorage.getItem('user'));
+      document.getElementById("offers").textContent =  user.firstName + ", we think you'll love these offers";
+      loginLogout.textContent = 'Log out';
+      loginLogout.setAttribute('onclick', 'logoutUser()');
+  }
+
+  function logoutUser(){
+    localStorage.removeItem('loggedInUser');
+    loginLogout.textContent = 'Log in';
+  }
+
+</script>
 
 
 </body>

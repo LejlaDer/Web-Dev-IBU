@@ -1,0 +1,40 @@
+{
+  "cities": [
+    {
+      "name": "New York City",
+      "country": "United States",
+      "residents": 8336817,
+      "fun_fact": "New York City is often referred to as \"The Big Apple\"."
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "residents": 2140526,
+      "fun_fact": "Paris is known as the \"City of Light\" (La Ville Lumière) due to its role in the Age of Enlightenment."
+    },
+    {
+      "name": "London",
+      "country": "United Kingdom",
+      "residents": 8961989,
+      "fun_fact": "The original name of London is \"Londinium\"."
+    },
+    {
+      "name": "Berlin",
+      "country": "Germany",
+      "residents": 3769495,
+      "fun_fact": "Berlin has more bridges than Venice."
+    },
+    {
+      "name": "Tokyo",
+      "country": "Japan",
+      "residents": 13960000,
+      "fun_fact": "Tokyo was formerly known as Edo."
+    },
+    {
+      "name": "Beijing",
+      "country": "China",
+      "residents": 21516000,
+      "fun_fact": "Beijing is one of the oldest cities in the world, with a history dating back over 3,000 years."
+    }
+  ]
+}

@@ -53,8 +53,10 @@ function validateCityInput(city) {
   
 }
 
+// Flight search button
+
 $(document).ready(function() {
-  // Event handler for flight search button
+
   $("#flightSearchBtn").click(function() {
       var departingFrom = $("#departingFrom").val();
       var arrivingAt = $("#arrivingAt").val();
@@ -66,7 +68,7 @@ $(document).ready(function() {
       }
   });
 
-  // Event handler for car rental search button
+  // Car rental search button
   $("#carSearchBtn").click(function() {
       var pickupPoint = $("#pickupPoint").val();
 
@@ -78,7 +80,7 @@ $(document).ready(function() {
   });
 });
 
-// spapp
+// Spapp
 
 $(document).ready(function() {
   var app = $.spapp({
@@ -91,31 +93,76 @@ $(document).ready(function() {
 });
 
 
-//Sign up validation and action
+// Function to handle form submission
 
 function submitForm() {
   var firstName = document.getElementsByName("FName")[0].value.trim();
   var lastName = document.getElementsByName("LName")[0].value.trim();
   var email = document.getElementsByName("Email")[0].value.trim();
   var phone = document.getElementsByName("Phone")[0].value.trim();
-  var signUpForm = document.getElementById("signupform");
 
+  document.querySelectorAll('.error-message').forEach(function(element) {
+      element.remove();
+  });
 
-  if (email.indexOf("@") === -1) {
-      alert("Please enter a valid email address.");
+  var isValid = true;
+
+  if (!email.includes('@')) {
+      var emailError = document.createElement('p');
+      emailError.className = 'error-message';
+      emailError.style.color = 'red';
+      emailError.textContent = 'Please enter a valid email address.';
+      document.getElementsByName("Email")[0].parentNode.appendChild(emailError);
+      isValid = false;
   }
 
-  if (phone.length < 9 || isNaN(phone)) {
-      alert("Please enter a valid phone number with at least 9 digits.");
+  if (phone.length < 9) {
+      var phoneError = document.createElement('p');
+      phoneError.className = 'error-message';
+      phoneError.style.color = 'red';
+      phoneError.textContent = 'Please enter a valid phone number (at least 9 digits).';
+      document.getElementsByName("Phone")[0].parentNode.appendChild(phoneError);
+      isValid = false;
   }
 
-  document.getElementById("fname").textContent = "Name: " + firstName;
-  document.getElementById("lname").textContent = "Last name: " + lastName;
-  document.getElementById("email").textContent = "Email: " + email;
-  document.getElementById("phone").textContent = "Phone number: " + phone;
+  if (isValid) {
+      // Save user data to localStorage
+      var userData = {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          phone: phone
+      };
+      localStorage.setItem('user', JSON.stringify(userData));
 
-  // Clear form fields
+      // Display user information
+      document.getElementById("fname").textContent = "Name: " + firstName;
+      document.getElementById("lname").textContent = "Last name: " + lastName;
+      document.getElementById("email").textContent = "Email: " + email;
+      document.getElementById("phone").textContent = "Phone number: " + phone;
+      document.getElementById("deleteUserButton").style.display = "inline-block";
+      document.getElementById("usermessage").style.display = "none";
 
+      // Clear form fields
+      document.getElementById("contactForm").reset();
+  }
 }
+
+function deleteUser() {
+  // Clear user information from localStorage
+  localStorage.removeItem('user');
+  
+  // Clear displayed user information
+  document.getElementById("fname").textContent = "";
+  document.getElementById("lname").textContent = "";
+  document.getElementById("email").textContent = "";
+  document.getElementById("phone").textContent = "";
+  document.getElementById("deleteUserButton").style.display = "none";
+  document.getElementById("usermessage").style.display = "block";
+}
+
+
+
+
 
 
