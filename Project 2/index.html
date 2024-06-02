@@ -168,11 +168,11 @@
     <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
     <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
     <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br><br>
-    <form id="contactForm" method="post"  action="">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p><button class="w3-button w3-black w3-padding-large toggle-theme" type="submit">SEND MESSAGE</button></p>
+    <form id="contactForm" method=""  action="index.html">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" name="fname"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" name="email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" name="message"></p>
+      <p><input class="w3-button w3-black w3-padding-large toggle-theme" type="submit" value="SEND MESSAGE"></p>
     </form>
   </div>
   
@@ -354,9 +354,15 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- jQuery SPA Plugin -->
+<!-- jQuery SPAPP Plugin -->
 <script src="./assets/js/jquery.spapp.js"></script>
 <script src="./assets/js/jquery.spapp.min.js"></script>
+
+<!--jQuery Validation Plugins-->
+
+<script src= "https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"> </script> 
+<script src= "https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
 
 <!-- Custom JS -->
 <script src="script.js"></script>
@@ -377,6 +383,49 @@
     localStorage.removeItem('loggedInUser');
     loginLogout.textContent = 'Log in';
   }
+ 
+  //Validation for contact form
+
+  $().ready(function () { 
+  
+  $("#contactForm").validate({ 
+
+      rules: { 
+          fname: "required", 
+          email: {
+              required: true,
+              email: true
+          },
+          message: { 
+              required: true, 
+              minlength: 10 
+          }
+      },
+      messages: { 
+          fname: " Please enter your first name", 
+          email: {
+            required: "Please enter your email",
+            email: "Please enter valid email format"
+          },
+          message: {
+            required: "This field is required",
+            minlength: "Messaage must be at least 10 characters long"
+          }
+      },
+      
+      submitHandler: function(form) {
+      $.ajax({
+      url: someurl.php,
+      type: "POST",
+      data: $(form).serialize(),
+      success: function(response) {
+        $('#contactForm').html("Your form was submitted!");
+      }            
+    });
+    $form.submit();
+}
+  }); 
+});
 
 </script>
 
